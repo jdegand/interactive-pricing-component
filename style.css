@@ -1,0 +1,257 @@
+:root {
+
+  --fullSliderBar: hsl(174, 77%, 80%);
+  --sliderBackround: hsl(174, 86%, 45%);
+  --discountBackground: hsl(14, 92%, 95%);
+  --discountText: hsl(15, 100%, 70%);
+  --CTAText: hsl(226, 100%, 87%);
+
+  --pricingComponentBackground: hsl (0, 0%, 100%);
+  --mainBackground: hsl(230, 100%, 99%);
+  --emptySliderBar: hsl(224, 65%, 95%);
+  --toggleBackground: hsl(223, 50%, 87%);
+  --grayishBlueText: hsl(225, 20%, 60%);
+  --darkDesaturatedBlue: hsl(227, 35%, 25%);
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  color: var(--grayishBlueText);
+}
+
+.bg-pattern {
+  position: absolute;
+  z-index: -5;
+}
+
+.bg-pattern img {
+  height: 350px;
+}
+
+.top-div {
+  position: relative;
+  padding: 100px 20px 50px;
+}
+
+.top-div h1 {
+  color: var(--darkDesaturatedBlue);
+  font-size: 18px;
+}
+
+#pattern-circles {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  top: 60px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.container {
+  background-color: #fff;
+  margin: 0 19px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px hsla(0,0%, 0%, 0.15);
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: var(--darkDesaturatedBlue);
+}
+
+.price {
+  padding-right: 5px;
+}
+
+.month {
+  margin-left: 10px;
+  font-size: 18px;
+  color: var(--grayishBlueText);
+}
+
+button {
+  font-family: inherit;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--darkDesaturatedBlue);
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px 40px;
+}
+
+#checkbox {
+  display: none;
+}
+
+.label {
+  position: relative;
+  background-color: var(--toggleBackground);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 0 10px;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+
+
+/*
+.label:active {
+  background-color: var(--sliderBackround);
+}
+*/
+.name {
+  font-size: 14px;
+}
+
+.name span {
+  color: var(--discountText);
+  background-color: var(--discountBackground);
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 30px;
+}
+
+.ball {
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.15s linear;
+}
+
+/* HTML order cant grab the label */
+
+  #checkbox:checked ~ .label  {
+  background-color: var(--sliderBackround);
+}
+
+#checkbox:checked + .ball {
+  transform: translateX(15px);
+}
+
+
+@media (min-width: 768px){
+  .bg-pattern img {
+    height: auto;
+  }
+
+  #checkbox:checked + .ball {
+    transform: translateX(24px);
+  }
+
+  .container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /*
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    order: 1;
+  }
+
+  .price-container {
+    order: 2;
+  }
+
+  .range {
+    order: 3;
+  }
+
+  .toggle {
+    order: 4;
+  }
+
+  .list {
+    order: 5;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex > div {
+    margin: 0 20px;
+  }
+
+  button {
+    margin-left: 40px;
+  }
+*/
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+}
+
+}

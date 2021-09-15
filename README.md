@@ -55,6 +55,6 @@ Users should be able to:
 
 ### Useful resources
 
-- [Javascript Tutorial](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/)
-- [JavatPoint](https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript)
-- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+- [Javascript Tutorial](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/) - Checked
+- [JavatPoint](https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript) - Checked value
+- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) - Checkbox
